@@ -6,6 +6,7 @@ from game.player import Player
 
 from models.random_model import RandomModel
 from models.math_expectation_model import MathExpectationModel
+from models.human_model import HumanModel
 
 
 class Game:
@@ -78,7 +79,6 @@ class Game:
         return not real_quantity >= quantity
 
 
-game = Game(3, ['Alice', 'Bob', 'Carl'], [5, 5, 5],
-            [MathExpectationModel, RandomModel, RandomModel])
-
+game = Game(2, ['Alice', 'Mark'], [5, 5],
+            [MathExpectationModel, HumanModel])
 game.start_game()
