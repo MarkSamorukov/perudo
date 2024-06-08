@@ -26,10 +26,11 @@ class Player:
 
         return dice
 
-    def counting_dice(self, value: int) -> int:
+    def counting_dice(self, value: int, print_mode) -> int:
         if self:
-            print(f"{self.name}) ", end='')
-            print(*self.dice)
+            if print_mode == 1:
+                print(f"{self.name}) ", end='')
+                print(*self.dice)
             if value == 1:
                 return self.dice.count(value)
             else:

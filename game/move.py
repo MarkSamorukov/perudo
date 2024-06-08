@@ -17,7 +17,7 @@ class Move:
         if not self.move['to_believe']:
             return 'Не верю'
         else:
-            phrase = random.choice(['Верю и говорю', 'Пусть будет', 'Думаю наберется', 'Уверен что есть'])
+            phrase = random.choice(['Пусть будет', 'Думаю наберется', 'Уверен что есть', 'Наверное, я скажу'])
             return f'{phrase} {self.move["quantity"]} {self.move["value"]}'
 
     def __bool__(self) -> bool:

@@ -8,8 +8,8 @@ class HumanModel:
         self.dice = dice
 
     def do_move(self):
-        print("Ваш ход. Ваши кости:")
-        print(self.dice)
+        print(f"Ваш ход (на столе {self.dice_counter} костей). Ваши кости:")
+        print(*self.dice)
         move = input()
         try:
             quantity, value = map(int, move.split())
